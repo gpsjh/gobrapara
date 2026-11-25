@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>২০ নং গোবরাপাড়া সরকারি প্রাথমিক বিদ্যালয়</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root{
+--primary:#087a55;
+--dark:#064b38;
+--light:#eaf7ef;
+--gold:#f4c542;
+--white:#ffffff;
+--text:#243b32;
+--gray:#718078;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Hind Siliguri',sans-serif;
+background:#f7faf8;
+color:var(--text);
+}
+
+/* TOP BAR */
+
+.topbar{
+background:var(--dark);
+color:white;
+padding:9px 7%;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+}
+
+.topbar a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+}
+
+/* HEADER */
+
+header{
+background:white;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 3px 20px #0000000c;
+}
+
+.navbar{
+max-width:1250px;
+margin:auto;
+padding:14px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:var(--dark);
+}
+
+.brand img{
+width:58px;
+height:58px;
+object-fit:contain;
+}
+
+.brand h3{
+font-size:18px;
+line-height:1.4;
+}
+
+.brand small{
+color:var(--gray);
+font-size:12px;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:23px;
+}
+
+nav a{
+text-decoration:none;
+color:#344d42;
+font-weight:600;
+font-size:15px;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+.menu-btn{
+display:none;
+background:var(--primary);
+color:white;
+border:0;
+padding:10px 14px;
+border-radius:7px;
+font-size:19px;
+}
+
+/* HERO */
+
+.hero{
+min-height:570px;
+background:
+linear-gradient(90deg,#043c30ee,#087a55a8),
+url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1800');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:1250px;
+margin:auto;
+width:100%;
+padding:50px 25px;
+color:white;
+}
+
+.hero-label{
+background:#ffffff20;
+border:1px solid #ffffff60;
+padding:8px 18px;
+border-radius:30px;
+display:inline-block;
+}
+
+.hero h1{
+font-size:clamp(35px,5vw,58px);
+line-height:1.25;
+max-width:800px;
+margin:25px 0;
+}
+
+.hero p{
+font-size:19px;
+max-width:650px;
+line-height:1.8;
+color:#e9fff3;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:13px 25px;
+background:var(--gold);
+color:#173d2c;
+text-decoration:none;
+border-radius:7px;
+font-weight:700;
+margin:5px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.btn-outline{
+background:transparent;
+border:1px solid white;
+color:white;
+}
+
+/* COMMON */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:80px 25px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title span{
+color:var(--primary);
+font-weight:700;
+}
+
+.section-title h2{
+font-size:35px;
+color:var(--dark);
+margin:8px 0;
+}
+
+.section-title p{
+color:var(--gray);
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:-45px;
+position:relative;
+z-index:2;
+}
+
+.stat{
+background:white;
+padding:28px 15px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 8px 30px #00000010;
+}
+
+.stat i{
+font-size:30px;
+color:var(--primary);
+}
+
+.stat h2{
+font-size:30px;
+color:var(--dark);
+margin:8px;
+}
+
+.stat p{
+color:var(--gray);
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.about-img{
+position:relative;
+}
+
+.about-img img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.about-text h2{
+font-size:32px;
+color:var(--dark);
+margin-bottom:18px;
+}
+
+.about-text p{
+line-height:2;
+color:var(--gray);
+margin-bottom:15px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:13px;
+border:1px solid #e7eee9;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px #00000010;
+}
+
+.card i{
+font-size:35px;
+color:var(--primary);
+margin-bottom:18px;
+}
+
+.card h3{
+color:var(--dark);
+margin-bottom:12px;
+}
+
+.card p{
+color:var(--gray);
+line-height:1.8;
+}
+
+/* HEADTEACHER */
+
+.headteacher{
+display:grid;
+grid-template-columns:300px 1fr;
+gap:35px;
+align-items:center;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 30px #00000008;
+}
+
+.headteacher img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.headteacher h2{
+color:var(--dark);
+margin-bottom:15px;
+}
+
+.headteacher p{
+color:var(--gray);
+line-height:2;
+}
+
+.headteacher h4{
+margin-top:20px;
+color:var(--primary);
+}
+
+/* NOTICE */
+
+.notice-area{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.notice-box{
+background:white;
+padding:25px;
+border-radius:13px;
+box-shadow:0 5px 25px #00000008;
+}
+
+.notice-box h3{
+color:var(--dark);
+margin-bottom:20px;
+border-bottom:2px solid var(--light);
+padding-bottom:12px;
+}
+
+.notice{
+display:flex;
+gap:15px;
+padding:15px 0;
+border-bottom:1px solid #eee;
+}
+
+.notice-date{
+background:var(--light);
+color:var(--primary);
+padding:10px;
+border-radius:7px;
+text-align:center;
+min-width:65px;
+}
+
+.notice-date strong{
+font-size:20px;
+display:block;
+}
+
+.notice h4{
+color:var(--dark);
+}
+
+.notice p{
+font-size:13px;
+color:var(--gray);
+}
+
+/* TEACHERS */
+
+.teacher{
+text-align:center;
+background:white;
+border-radius:12px;
+padding:25px;
+box-shadow:0 5px 20px #00000008;
+}
+
+.teacher img{
+width:125px;
+height:125px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid var(--light);
+}
+
+.teacher h3{
+color:var(--dark);
+margin-top:15px;
+}
+
+.teacher p{
+color:var(--gray);
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.gallery img{
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:12px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* CONTACT */
+
+.contact{
+background:linear-gradient(135deg,#064b38,#087a55);
+color:white;
+border-radius:18px;
+padding:40px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.contact h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.contact p{
+margin:15px 0;
+line-height:1.8;
+}
+
+.contact i{
+color:var(--gold);
+margin-right:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#033b2d;
+color:white;
+padding:45px 7% 20px;
+}
+
+.footer-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:35px;
+}
+
+footer h3{
+margin-bottom:18px;
+}
+
+footer p,footer a{
+color:#c5e3d4;
+line-height:2;
+text-decoration:none;
+}
+
+footer a{
+display:block;
+}
+
+.copyright{
+text-align:center;
+border-top:1px solid #ffffff25;
+margin-top:35px;
+padding-top:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.menu-btn{
+display:block;
+}
+
+nav{
+display:none;
+position:absolute;
+top:85px;
+left:0;
+width:100%;
+background:white;
+padding:25px;
+flex-direction:column;
+align-items:flex-start;
+box-shadow:0 10px 20px #0001;
+}
+
+nav.active{
+display:flex;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.cards{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:650px){
+
+.topbar{
+justify-content:center;
+text-align:center;
+}
+
+.topbar .social{
+display:none;
+}
+
+.brand h3{
+font-size:14px;
+}
+
+.brand img{
+width:45px;
+height:45px;
+}
+
+.hero{
+min-height:480px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.about,
+.notice-area,
+.headteacher,
+.contact,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+}
+
+.gallery img{
+height:150px;
+}
+
+.section-title h2{
+font-size:28px;
+}
+
+.headteacher img{
+height:260px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<div>
+<i class="fas fa-envelope"></i>
+বিদ্যালয়ের অফিস
+</div>
+
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="brand">
+
+<img src="logo.png" alt="School Logo">
+
+<div>
+<h3>২০ নং গোবরাপাড়া সরকারি প্রাথমিক বিদ্যালয়</h3>
+<small>শিক্ষাই জাতির মেরুদণ্ড</small>
+</div>
+
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</button>
+
+<nav id="navigation">
+
+<a href="#home">হোম</a>
+<a href="#about">পরিচিতি</a>
+<a href="#activities">কার্যক্রম</a>
+<a href="#teachers">শিক্ষকবৃন্দ</a>
+<a href="#notice">নোটিশ</a>
+<a href="#gallery">গ্যালারি</a>
+<a href="#contact">যোগাযোগ</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<span class="hero-label">
+WELCOME TO OUR SCHOOL
+</span>
+
+<h1>
+২০ নং গোবরাপাড়া সরকারি প্রাথমিক বিদ্যালয়
+</h1>
+
+<p>
+মানসম্মত শিক্ষা, নৈতিক মূল্যবোধ ও সৃজনশীলতার মাধ্যমে
+একটি আলোকিত প্রজন্ম গড়ে তোলাই আমাদের অঙ্গীকার।
+</p>
+
+<div class="buttons">
+
+<a href="#about" class="btn">
+বিদ্যালয় সম্পর্কে জানুন
+</a>
+
+<a href="#contact" class="btn btn-outline">
+যোগাযোগ করুন
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATISTICS -->
+
+<div class="container" style="padding-top:0">
+
+<div class="stats">
+
+<div class="stat">
+<i class="fas fa-user-graduate"></i>
+<h2>---</h2>
+<p>মোট শিক্ষার্থী</p>
+</div>
+
+<div class="stat">
+<i class="fas fa-chalkboard-teacher"></i>
+<h2>---</h2>
+<p>মোট শিক্ষক</p>
+</div>
+
+<div class="stat">
+<i class="fas fa-book-open"></i>
+<h2>---</h2>
+<p>শ্রেণি সংখ্যা</p>
+</div>
+
+<div class="stat">
+<i class="fas fa-school"></i>
+<h2>২০ নং</h2>
+<p>বিদ্যালয় নম্বর</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="container" id="about">
+
+<div class="section-title">
+<span>ABOUT OUR SCHOOL</span>
+<h2>আমাদের বিদ্যালয় সম্পর্কে</h2>
+<p>একটি সুন্দর ও শিক্ষিত সমাজ গড়ার প্রত্যয়ে</p>
+</div>
+
+<div class="about">
+
+<div class="about-img">
+<img src="school.jpg" alt="বিদ্যালয়ের ছবি">
+</div>
+
+<div class="about-text">
+
+<h2>স্বাগতম ২০ নং গোবরাপাড়া সরকারি প্রাথমিক বিদ্যালয়ে</h2>
+
+<p>
+আমাদের বিদ্যালয় শিশুদের মানসম্মত প্রাথমিক শিক্ষা প্রদানের
+লক্ষ্যে কাজ করে যাচ্ছে। শিক্ষার্থীদের মেধা, মনন,
+সৃজনশীলতা ও নৈতিক মূল্যবোধ বিকাশে আমরা অঙ্গীকারবদ্ধ।
+</p>
+
+<p>
+শিক্ষার্থীদের জন্য নিরাপদ, আনন্দময় ও শিক্ষাবান্ধব
+পরিবেশ নিশ্চিত করাই আমাদের প্রধান লক্ষ্য।
+</p>
+
+<a href="#contact" class="btn">বিস্তারিত জানুন</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section class="container" id="activities">
+
+<div class="section-title">
+<span>OUR ACTIVITIES</span>
+<h2>আমাদের কার্যক্রম</h2>
+<p>শিক্ষার্থীদের সার্বিক বিকাশে বিভিন্ন উদ্যোগ</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-book"></i>
+<h3>মানসম্মত শিক্ষা</h3>
+<p>নিয়মিত পাঠদান ও শিক্ষার্থীদের মেধা বিকাশ।</p>
+</div>
+
+<div class="card">
+<i class="fas fa-futbol"></i>
+<h3>খেলাধুলা</h3>
+<p>শিক্ষার্থীদের শারীরিক ও মানসিক বিকাশে খেলাধুলা।</p>
+</div>
+
+<div class="card">
+<i class="fas fa-tree"></i>
+<h3>বৃক্ষরোপণ</h3>
+<p>পরিবেশ সংরক্ষণ ও সবুজ বিদ্যালয় গড়ে তোলার উদ্যোগ।</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HEADTEACHER -->
+
+<section class="container">
+
+<div class="section-title">
+<span>HEAD TEACHER</span>
+<h2>প্রধান শিক্ষকের বাণী</h2>
+</div>
+
+<div class="headteacher">
+
+<img src="headteacher.jpg" alt="প্রধান শিক্ষক">
+
+<div>
+
+<h2>প্রধান শিক্ষকের বক্তব্য</h2>
+
+<p>
+শিক্ষা একটি জাতির উন্নতির প্রধান হাতিয়ার।
+আমাদের বিদ্যালয়ের প্রতিটি শিক্ষার্থী যেন জ্ঞান,
+নৈতিকতা ও মানবিক গুণাবলিতে সমৃদ্ধ হয়ে দেশের
+সুনাগরিক হিসেবে গড়ে উঠতে পারে, সেটিই আমাদের প্রত্যাশা।
+</p>
+
+<h4>[প্রধান শিক্ষকের নাম]</h4>
+<p>প্রধান শিক্ষক</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TEACHERS -->
+
+<section class="container" id="teachers">
+
+<div class="section-title">
+<span>OUR TEACHERS</span>
+<h2>আমাদের শিক্ষকবৃন্দ</h2>
+<p>দক্ষ ও অভিজ্ঞ শিক্ষকবৃন্দ</p>
+</div>
+
+<div class="cards">
+
+<div class="teacher">
+<img src="teacher1.jpg" alt="শিক্ষক">
+<h3>[শিক্ষকের নাম]</h3>
+<p>সহকারী শিক্ষক</p>
+</div>
+
+<div class="teacher">
+<img src="teacher2.jpg" alt="শিক্ষক">
+<h3>[শিক্ষকের নাম]</h3>
+<p>সহকারী শিক্ষক</p>
+</div>
+
+<div class="teacher">
+<img src="teacher3.jpg" alt="শিক্ষক">
+<h3>[শিক্ষকের নাম]</h3>
+<p>সহকারী শিক্ষক</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NOTICE -->
+
+<section class="container" id="notice">
+
+<div class="section-title">
+<span>NOTICE BOARD</span>
+<h2>নোটিশ বোর্ড</h2>
+<p>বিদ্যালয়ের গুরুত্বপূর্ণ ঘোষণা</p>
+</div>
+
+<div class="notice-area">
+
+<div class="notice-box">
+
+<h3><i class="fas fa-bullhorn"></i> সাম্প্রতিক নোটিশ</h3>
+
+<div class="notice">
+<div class="notice-date">
+<strong>--</strong>
+<small>তারিখ</small>
+</div>
+<div>
+<h4>ভর্তি সংক্রান্ত বিজ্ঞপ্তি</h4>
+<p>বিস্তারিত তথ্য এখানে প্রকাশ করা হবে।</p>
+</div>
+</div>
+
+<div class="notice">
+<div class="notice-date">
+<strong>--</strong>
+<small>তারিখ</small>
+</div>
+<div>
+<h4>পরীক্ষার সময়সূচি</h4>
+<p>পরীক্ষা সংক্রান্ত তথ্য এখানে প্রকাশ করা হবে।</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="notice-box">
+
+<h3><i class="fas fa-calendar-alt"></i> গুরুত্বপূর্ণ তথ্য</h3>
+
+<div class="notice">
+<div class="notice-date">📚</div>
+<div>
+<h4>শ্রেণি কার্যক্রম</h4>
+<p>বিদ্যালয়ের শ্রেণি কার্যক্রমের তথ্য।</p>
+</div>
+</div>
+
+<div class="notice">
+<div class="notice-date">🏫</div>
+<div>
+<h4>অভিভাবক সভা</h4>
+<p>অভিভাবক সভার ঘোষণা এখানে প্রকাশ করা হবে।</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="container" id="gallery">
+
+<div class="section-title">
+<span>PHOTO GALLERY</span>
+<h2>আমাদের ফটো গ্যালারি</h2>
+<p>বিদ্যালয়ের বিভিন্ন কার্যক্রমের ছবি</p>
+</div>
+
+<div class="gallery">
+
+<img src="school1.jpg" alt="বিদ্যালয়">
+<img src="school2.jpg" alt="শিক্ষার্থী">
+<img src="school3.jpg" alt="কার্যক্রম">
+<img src="school4.jpg" alt="অনুষ্ঠান">
+<img src="school5.jpg" alt="খেলাধুলা">
+<img src="school6.jpg" alt="শ্রেণিকক্ষ">
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="container" id="contact">
+
+<div class="contact">
+
+<div>
+
+<h2>যোগাযোগ করুন</h2>
+
+<p>
+বিদ্যালয় সম্পর্কিত যেকোনো তথ্যের জন্য
+আমাদের সঙ্গে যোগাযোগ করুন।
+</p>
+
+<p>
+<i class="fas fa-map-marker-alt"></i>
+ঠিকানা: গোবরাপাড়া, [উপজেলা], [জেলা]
+</p>
+
+<p>
+<i class="fas fa-phone"></i>
+মোবাইল: [যোগাযোগ নম্বর]
+</p>
+
+<p>
+<i class="fas fa-envelope"></i>
+ই-মেইল: [ই-মেইল]
+</p>
+
+</div>
+
+<div>
+
+<h2>বিদ্যালয়ের অবস্থান</h2>
+
+<p>
+এখানে বিদ্যালয়ের Google Maps Location যুক্ত করা যাবে।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>২০ নং গোবরাপাড়া সরকারি প্রাথমিক বিদ্যালয়</h3>
+
+<p>
+শিক্ষা, শৃঙ্খলা ও মানবিকতার সমন্বয়ে
+একটি আলোকিত ভবিষ্যৎ গড়াই আমাদের লক্ষ্য।
+</p>
+
+</div>
+
+<div>
+
+<h3>গুরুত্বপূর্ণ লিংক</h3>
+
+<a href="#home">হোম</a>
+<a href="#about">বিদ্যালয় পরিচিতি</a>
+<a href="#notice">নোটিশ বোর্ড</a>
+<a href="#gallery">ফটো গ্যালারি</a>
+
+</div>
+
+<div>
+
+<h3>যোগাযোগ</h3>
+
+<p>গোবরাপাড়া, [উপজেলা], [জেলা]</p>
+<p>বাংলাদেশ</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+<p>
+© <span id="year"></span>
+২০ নং গোবরাপাড়া সরকারি প্রাথমিক বিদ্যালয়
+</p>
+
+<p>Designed for Educational Excellence</p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+document.getElementById("navigation")
+.classList.toggle("active");
+
+}
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+document.getElementById("navigation")
+.classList.remove("active");
+
+});
+
+});
+
+document.getElementById("year").textContent=
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
